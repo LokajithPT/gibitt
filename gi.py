@@ -48,7 +48,7 @@ def main():
             else:
                 print(colored("Invalid choice!", "red"))
                 continue
-            os.system(f"git remote add origin https://github.com/TheDarkKnightLives/{name}.git")
+            os.system(f"git remote add origin https://github.com/LokajithPT/{name}.git")
             os.system("git init && git add .")
             commit = input(colored("Commit message: ", "magenta"))
             os.system(f"git commit -m \"{commit}\"")
@@ -58,6 +58,7 @@ def main():
         elif val == "side":
             os.system("git add .")
             commit = input(colored("Commit message: ", "magenta"))
+            os.system("git branch -m main ")
             os.system(f"git commit -m \"{commit}\" && git push -u origin main")
         elif val == "newbranch":
             name = input(colored("New branch name: ", "magenta"))
