@@ -38,6 +38,17 @@ def main():
     help()
     while True:
         val = input(colored("\n>>> ", "cyan")).replace(" ", "")
+        if val == "justadd":
+            print(colored("adding ...", "green"))
+            os.system("git add .")
+        if val == "justcommit":
+            name = input(colored("commit msg:","red"))
+            print(colored("commiting ..."))
+            os.system(f"git commit -m \"{name}\" ")
+
+        if val == "justpushmain":
+            print(colored("pushing ... "))
+            os.system("git push -u origin main ")
         if val == "main":
             name = input(colored("\nRepo name: ", "magenta"))
             mm = input(colored("Public or private (pu/pr): ", "magenta"))
@@ -52,13 +63,13 @@ def main():
             os.system("git init && git add .")
             commit = input(colored("Commit message: ", "magenta"))
             os.system(f"git commit -m \"{commit}\"")
-            os.system("git branch -M main && git push -u origin main")
+            os.system("git branch -M main")
+            os.system("git push -u origin main")
         elif val == "branch":
             os.system("git branch")
         elif val == "side":
             os.system("git add .")
             commit = input(colored("Commit message: ", "magenta"))
-            os.system("git branch -m main ")
             os.system(f"git commit -m \"{commit}\" && git push -u origin main")
         elif val == "newbranch":
             name = input(colored("New branch name: ", "magenta"))
