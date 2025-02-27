@@ -27,7 +27,7 @@ def help():
     print(colored("(changebranch) - change branches", "blue"))
     print(colored("(justadd) - Add files", "blue"))
     print(colored("(justcommit) - Commit changes", "blue"))
-    print(colored("(justpush) - Push changes", "blue"))
+    print(colored("(justpushmain) - Push changes", "blue"))
     print(colored("(status) - Show Git status", "blue"))
     print(colored("(log) - Show commit history", "blue"))
     print(colored("(status) - Show Git status", "blue"))
