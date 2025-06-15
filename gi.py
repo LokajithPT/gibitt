@@ -59,11 +59,12 @@ def main():
             else:
                 print(colored("Invalid choice!", "red"))
                 continue
-            os.system(f"git remote add origin https://github.com/LokajithPT/{name}.git")
             os.system("git init && git add .")
             commit = input(colored("Commit message: ", "magenta"))
             os.system(f"git commit -m \"{commit}\"")
             os.system("git branch -M main")
+            os.system(f"git remote add origin https://github.com/LokajithPT/{name}.git")
+
             os.system("git push -u origin main")
         elif val == "branch":
             os.system("git branch")
